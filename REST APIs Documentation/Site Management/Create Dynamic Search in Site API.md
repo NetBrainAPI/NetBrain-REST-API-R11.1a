@@ -1,15 +1,15 @@
-# Update Site Properties API Design
+# Create Dynamic Search in Site API Design
  
-## ***PUT*** /V1/CMDB/Users
-Call this API to update site properties in NetBrain Domain Management.
+## ***POST*** /V1/CMDB/Users
+Call this API to create dynamic search in NetBrain Domain Management - Site Manager.
  
 ## Detail Information
  
-> **Title** : Update Site Properties API<br>
+> **Title** : Create Dynamic Search in Site API<br>
  
-> **Version** : 26/10/2023
+> **Version** : 07/11/2023
  
-> **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Sites/SiteInfo
+> **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Sites/Leaf/DynamicSearch
  
 > **Authentication** :
  
@@ -23,54 +23,31 @@ Call this API to update site properties in NetBrain Domain Management.
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-| Name  | string | Name of site properties |
-| Region | string | Region of customer |
-| Location/Address | string | Location/Address of customer |
-| Employee Number | integer | Number of employees |
-| Device Count | string | Number of device in site |
-| Contact Name | string | Site admin contact name |
-| Phone number | string | Site admin phone number |
-| Email | string | Site admin email |
-| Type | string | Site type. (Headquarter, Data Center, Regional Office, Disaster Recovery) |
-| Description | string | Description of site |
-| --- | --- | --- |
-| Customized Information | object | Site customized information |
- 
+|  |  | Need either or of siteId and sitePath. Calling this API to add dynamic search filter to the site which specified by site path or Id. All devices will be marked as manually added type. |
+| sitesId^ | string | The unique id of specified site. |
+| sitePath^ | string | Full path name of a site. For example, 'My Network/Site1/Boston'. |
+| Dynamic filter | string | This string will include all parameters selected such as Device Property, Interface Property, Module Property, Config File, and Front Server, and their respective parameters. |
+
 > ***Example***
  
  
 ```python
-{
-   "siteInfo": [
-       {
-           "siteId": "1da4fda8-5d04-491b-8bb0-2e9abb989a60",
-           "sitePath": "My Network/NA/US",
-           "isContainer": true,
-           "siteType": 0,
-           "properties": {
-               "name": "site1",
-               "region": "XXXX",
-               "locAdr": "Boston",
-               "employeeNum": 1,
-               "deviceNum": 50,
-               "contactName": "XXXXX",
-               "phone": "123456789",
-               "email": "XXXX@.com",
-               "siteType": "Headquarter",
-               "description": "random example",
-               "customizedInfo": [
-                   "Field1": "XXXXXXXXXXXXXXXXXXXX",
-                   .
-                   .
-                   .
-                   ]         
-             }
-       },
-       .
-       .
-       .
-   ]
-}
+"expression" : "A and B",
+  "conditions" : [{
+    "schema" : "mainType", // the type of expression (e.g. A and B) should match with the type of the schema
+    "operator" : 0, // range: 0~13
+    "expression" : "",
+    "escapeExpression" : false,
+    "expressionNames" : null,
+    "fieldType" : 0
+   }, {
+    "schema" : "intfs.speed",
+    "operator" : 4,
+    "expression" : "",
+    "escapeExpression" : false,
+    "expressionNames" : null,
+    "fieldType" : 0
+   }]
 ```
  
 ## Parameters(****required***)
@@ -99,7 +76,7 @@ Call this API to update site properties in NetBrain Domain Management.
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-| statusCode| integer | The returned status code of executing the API. |
+| statusCode | integer | The returned status code of executing the API. |
 | statusDescription | string | The explanation of the status code. |
  
 > ***Example***
