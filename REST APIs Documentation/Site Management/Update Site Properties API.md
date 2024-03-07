@@ -23,53 +23,57 @@ Call this API to update site properties in NetBrain Domain Management.
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-| Name  | string | Name of site properties |
-| Region | string | Region of customer |
-| Location/Address | string | Location/Address of customer |
-| Employee Number | integer | Number of employees |
-| Device Count | string | Number of device in site |
-| Contact Name | string | Site admin contact name |
-| Phone number | string | Site admin phone number |
-| Email | string | Site admin email |
-| Type | string | Site type. (Headquarter, Data Center, Regional Office, Disaster Recovery) |
-| Description | string | Description of site |
-| --- | --- | --- |
-| Customized Information | object | Site customized information |
+| siteId^ | string | The unique id of specified site. Optional, Need either or of siteId and sitePath. |
+| sitePath^ | string | Full path name of a site. For example, 'My Network/Site1/Boston'. Optional |
+| siteCategory^ | integer | Category of Site. If there is no site with the same path at the same level, you do not need to pass this parameter. ContainerSite = 1, LeafSite = 2, |
+| properties.region | string | Region of customer |
+| properties.locAdr | string | Location/Address of customer |
+| properties.employeeNum | integer | Number of employees |
+| properties.contactName | string | Site admin contact name |
+| properties.phone | string | Site admin phone number |
+| properties.email | string | Site admin email |
+| properties.siteType | string | Site type. (Headquarter, Data Center, Regional Office, Disaster Recovery) |
+| properties.description | string | Description of site |
+| properties.customizedInfo | object | CustomizedInfo of site |
  
 > ***Example***
  
  
 ```python
 {
-   "siteInfo": [
-       {
-           "siteId": "1da4fda8-5d04-491b-8bb0-2e9abb989a60",
-           "sitePath": "My Network/NA/US",
-           "isContainer": true,
-           "siteType": 0,
-           "properties": {
-               "name": "site1",
-               "region": "XXXX",
-               "locAdr": "Boston",
-               "employeeNum": 1,
-               "deviceNum": 50,
-               "contactName": "XXXXX",
-               "phone": "123456789",
-               "email": "XXXX@.com",
-               "siteType": "Headquarter",
-               "description": "random example",
-               "customizedInfo": [
-                   "Field1": "XXXXXXXXXXXXXXXXXXXX",
-                   .
-                   .
-                   .
-                   ]         
-             }
-       },
-       .
-       .
-       .
-   ]
+    "siteId": "c3845ef0-1fac-4797-96fb-b9884a8297ed",
+    //"sitePath": "My Network/Unnamed-site4",
+    "filter": {
+        "expression": "A and (b and C) or d or e and f",
+        "conditions": [
+            {
+                "schema": "subType", // the type of expression (e.g. A and B) should match with the type of the schema
+                "operator": 0, // range: 0~13
+                "expression": "rootType"
+            },
+            {
+                "schema": "intfs.speed",
+                "operator": 4,
+                "expression": "1"
+            },
+            {
+                "schema": "ExternalServers.ExternalServerId",
+                "operator": 0,
+                "expression": "78ed6162-1b65-4f82-bd2f-45fc4a443e7a"
+            },
+             {
+                "schema": "proxyServer",
+                "operator": 0,
+                "expression": "none;FS1"
+            },
+            {
+                "expression": "False",
+                "operator": 0,
+                "schema": "hasEIGRPConfig",
+                "fieldType": 2
+            }
+        ]
+    }
 }
 ```
  
