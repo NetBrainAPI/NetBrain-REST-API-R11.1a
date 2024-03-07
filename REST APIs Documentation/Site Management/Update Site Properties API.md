@@ -125,27 +125,43 @@ import json
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
  
 # Set the request inputs
-token = '684c4e42-833a-428d-a5c9-3f047f3d3a67'
-nb_url = "http://192.168.28.79"
-full_url = nb_url + "/ServicesAPI/API/V1/CMDB/Users/SyncExternalUsers"
+token = '2cd5a9ef-0100-4071-8dad-112e55f8c957'
+nb_url = "http://192.168.31.191"
+full_url = nb_url + "/ServicesAPI/API/V1/CMDB/Sites/SiteInfo"
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 headers["Token"] = token
  
+sitePath = "My Network/Unnamed-site1"
+properties = {
+        "region": "2354",
+        "locAdr": "523",
+        "employeeNum": 0,
+        "contactName": "23523",
+        "phone": "5235",
+        "email": "23523@1.com",
+        "siteType": "None",
+        "description": "12412125",
+        "customizedInfo": {"tags":"112312"}
+}
+
 body = {
-        "externalServerType": [1, 2]
-        }
+    "sitePath": sitePath,
+    "properties" : properties
+}
+
  
 try:
-    response = requests.post(full_url, data = json.dumps(body), headers = headers, verify = False)
+    response = requests.put(full_url, data = json.dumps(body), headers=headers, verify=False)
+    print(response)
     if response.status_code == 200:
         result = response.json()
         print (result)
     else:
-        print ("Sync AD/LDAP Users failed! - " + str(response.text))
- 
+        print ("Failed to update site properties - " + str(response.text))
+
 except Exception as e:
-    print (str(e))
- 
+    print (str(e)) 
+
 ```
  
     {'statusCode': 790200, 'statusDescription': 'Success.'}
@@ -155,11 +171,22 @@ except Exception as e:
  
  
 ```python
-curl --location 'https://nextgen-training.netbrain.com/ServicesAPI/API/V1/CMDB/Users/SyncExternalUsers' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'token: 684c4e42-833a-428d-a5c9-3f047f3d3a67' \
---data '{
-    "externalServerType": [1, 2]
+curl -X PUT \
+  http://192.168.31.191//ServicesAPI/API/V1/CMDB/Sites/SiteInfo \
+  -H "Content-Type: application/json"
+  -H 'token: 2cd5a9ef-0100-4071-8dad-112e55f8c957' \
+  -d '{
+    "sitePath": "My Network/Unnamed-site1",
+    "properties" : {
+        "region": "2354",
+        "locAdr": "523",
+        "employeeNum": 0,
+        "contactName": "23523",
+        "phone": "5235",
+        "email": "23523@1.com",
+        "siteType": "None",
+        "description": "12412125",
+        "customizedInfo": {"tags":"112312"}
+  }
 }'
 ```
