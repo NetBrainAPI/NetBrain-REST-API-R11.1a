@@ -23,31 +23,46 @@ Call this API to create dynamic search in NetBrain Domain Management - Site Mana
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-|  |  | Need either or of siteId and sitePath. Calling this API to add dynamic search filter to the site which specified by site path or Id. All devices will be marked as manually added type. |
-| sitesId^ | string | The unique id of specified site. |
-| sitePath^ | string | Full path name of a site. For example, 'My Network/Site1/Boston'. |
-| Dynamic filter | string | This string will include all parameters selected such as Device Property, Interface Property, Module Property, Config File, and Front Server, and their respective parameters. |
+| sitesId^ | string | TThe unique id of specified site. Need either or of siteId and sitePath. |
+| sitePath^ | string | Full path name of a site. e.g. 'My Network/Site1/Boston'. |
+| filter | string | This string will include all parameters selected such as Device Property, Interface Property, Module Property, Config File, and Front Server, and their respective parameters. |
+| filter.expression | string | e.g. A and B and C |
+| filter.conditions | array | |
+| filter.conditions.schema | string | Schema name  |
+| filter.conditions.operator | integer |<table>  <thead>  <tr>  <th></th>  <th>Operator</th>  <th>Operator int value</th>  <th>Schema Type</th>  <th>Schema</th>  </tr>  </thead>  <tbody>  <tr>  <td>Matches any</td>  <td><code>'Isn't this fun?'</code></td>  <td>‘Isn’t this fun?’</td>  </tr>  <tr>  <td>Quotes</td>  <td><code>"Isn't this fun?"</code></td>  <td>“Isn’t this fun?”</td>  </tr>  <tr>  <td>Dashes</td>  <td><code>-- is en-dash, --- is em-dash</code></td>  <td>– is en-dash, — is em-dash</td>  </tr>  </tbody>  </table>      |
+| filter.conditions.expression | string | |
+| filter.conditions.fieldType^ | integer | String = 0, Double = 1, Boolean = 2, |
+
+
 
 > ***Example***
  
  
 ```python
-"expression" : "A and B",
-  "conditions" : [{
-    "schema" : "mainType", // the type of expression (e.g. A and B) should match with the type of the schema
-    "operator" : 0, // range: 0~13
-    "expression" : "",
-    "escapeExpression" : false,
-    "expressionNames" : null,
-    "fieldType" : 0
-   }, {
-    "schema" : "intfs.speed",
-    "operator" : 4,
-    "expression" : "",
-    "escapeExpression" : false,
-    "expressionNames" : null,
-    "fieldType" : 0
-   }]
+{
+  sitePath : "My Network/Unnamed-site1"
+  filter : {
+          "expression": "A and (b and C)",
+          "conditions": [
+              {
+                  "schema": "subType",
+                  "operator": 0,
+                  "expression": "rootType"
+              },
+              {
+                  "schema": "intfs.speed",
+                  "operator": 4,
+                  "expression": "1"
+              },
+              {
+                  "expression": "False",
+                  "operator": 0,
+                  "schema": "hasEIGRPConfig",
+                  "fieldType": 2
+              }
+          ]
+      }
+}
 ```
  
 ## Parameters(****required***)
@@ -103,26 +118,53 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
  
 # Set the request inputs
 token = '684c4e42-833a-428d-a5c9-3f047f3d3a67'
-nb_url = "http://192.168.28.79"
-full_url = nb_url + "/ServicesAPI/API/V1/CMDB/Users/SyncExternalUsers"
+nb_url = "http://192.168.31.191"
+full_url = nb_url + "/ServicesAPI/API/V1/CMDB/Sites/Leaf/DynamicSearch"
 headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 headers["Token"] = token
  
+{
+  sitePath : "My Network/Unnamed-site1"
+  filter : {
+          "expression": "A and (b and C)",
+          "conditions": [
+              {
+                  "schema": "subType",
+                  "operator": 0,
+                  "expression": "rootType"
+              },
+              {
+                  "schema": "intfs.speed",
+                  "operator": 4,
+                  "expression": "1"
+              },
+              {
+                  "expression": "False",
+                  "operator": 0,
+                  "schema": "hasEIGRPConfig",
+                  "fieldType": 2
+              }
+          ]
+      }
+}
+
 body = {
-        "externalServerType": [1, 2]
-        }
+    "sitePath": sitePath,
+    "filter" : filter
+}
  
 try:
-    response = requests.post(full_url, data = json.dumps(body), headers = headers, verify = False)
+    response = requests.put(full_url, json.dumps(body), headers=headers, verify=False)
+    print(response)
     if response.status_code == 200:
         result = response.json()
         print (result)
     else:
-        print ("Sync AD/LDAP Users failed! - " + str(response.text))
- 
+        print ("Failed to create dynamic search - " + str(response.text))
+
 except Exception as e:
-    print (str(e))
- 
+    print (str(e)) 
+
 ```
  
     {'statusCode': 790200, 'statusDescription': 'Success.'}
@@ -132,11 +174,32 @@ except Exception as e:
  
  
 ```python
-curl --location 'https://nextgen-training.netbrain.com/ServicesAPI/API/V1/CMDB/Users/SyncExternalUsers' \
---header 'Content-Type: application/json' \
---header 'Accept: application/json' \
---header 'token: 684c4e42-833a-428d-a5c9-3f047f3d3a67' \
---data '{
-    "externalServerType": [1, 2]
+curl -X PUT \
+  http://192.168.31.191/ServicesAPI/API/V1/CMDB/Sites/Leaf/DynamicSearch \
+  -H "Content-Type: application/json"
+  -H 'token: db4363c3-2f5f-47da-bfc8-2d14b6992558' \
+  -d '{
+    "sitePath": "My Network/Unnamed-site1",
+    "filter" : {
+        "expression": "A and (b and C)",
+        "conditions": [
+            {
+                "schema": "subType",
+                "operator": 0,
+                "expression": "rootType"
+            },
+            {
+                "schema": "intfs.speed",
+                "operator": 4,
+                "expression": "1"
+            },
+            {
+                "expression": "False",
+                "operator": 0,
+                "schema": "hasEIGRPConfig",
+                "fieldType": 2
+            }
+        ]
+    }
 }'
 ```
