@@ -156,21 +156,21 @@ To see the list of all REST APIs view "REST APIs Documentation".<br>
 ### [Site Management](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/tree/main/REST%20APIs%20Documentation/Site%20Management) 
 1) [Add Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Add%20Site%20Devices%20API.md)<br>
 2) [Commit Site Transaction API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Commit%20Site%20Transaction%20API.md)<br>
-3) [Create A Leaf Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20A%20Leaf%20Site%20API.md)<br>
-4) [Create A Parent Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20A%20Parent%20Site%20API.md)<br>
-5) [Create A Site Transaction API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20A%20Site%20Transaction%20API.md)<br>
+3) [Create Dynamic Search API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20Dynamic%20Search%20in%20Site%20API.md)
+4) [Create A Leaf Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20A%20Leaf%20Site%20API.md)<br>
+5) [Create A Parent Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20A%20Parent%20Site%20API.md)<br>
 6) [Create Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20Site%20API.md)<br>
-7) [Delete A Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Delete%20A%20Site%20API.md)<br>
-8) [Delete Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Delete%20Site%20Devices%20API.md)<br>
-9) [Get Child Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Child%20Site%20API.md)<br>
-10) [Get Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Site%20Devices%20API.md)<br>
-11) [Get Site Info API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Site%20Info%20API.md)<br>
-12) [Get Site Properties API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Site%20Properties%20API.md)<br>
-13) [Remove Site Transaction API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Remove%20Site%20Transaction%20API.md)<br>
-14) [Replace Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Replace%20Site%20Devices%20API.md)<br>
-15) [Site Transaction Heartbeat API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Site%20Transaction%20Heartbeat%20API.md)
-16) [Update Site Properties API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Update%20Site%20Properties%20API.md)
-17) [Create Dynamic Search API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20Dynamic%20Search%20in%20Site%20API.md)
+7) [Create A Site Transaction API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20A%20Site%20Transaction%20API.md)<br>
+8) [Delete A Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Delete%20A%20Site%20API.md)<br>
+9) [Delete Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Delete%20Site%20Devices%20API.md)<br>
+10) [Get Child Site API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Child%20Site%20API.md)<br>
+11) [Get Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Site%20Devices%20API.md)<br>
+12) [Get Site Info API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Site%20Info%20API.md)<br>
+13) [Get Site Properties API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Get%20Site%20Properties%20API.md)<br>
+14) [Remove Site Transaction API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Remove%20Site%20Transaction%20API.md)<br>
+15) [Replace Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Replace%20Site%20Devices%20API.md)<br>
+16) [Site Transaction Heartbeat API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Site%20Transaction%20Heartbeat%20API.md)
+17) [Update Site Properties API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Update%20Site%20Properties%20API.md)
 
 
 ### [Shared Device Setting Management](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/tree/main/REST%20APIs%20Documentation/Shared%20Device%20Setting%20Management) 
