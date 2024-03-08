@@ -29,7 +29,76 @@ Call this API to create dynamic search in NetBrain Domain Management - Site Mana
 | filter.expression | string | e.g. A and B and C |
 | filter.conditions | array | |
 | filter.conditions.schema | string | Schema name  |
-| filter.conditions.operator | integer |<table>  <thead>  <tr>  <th></th>  <th>Operator</th>  <th>Operator int value</th>  <th>Schema Type</th>  <th>Schema</th>  </tr>  </thead>  <tbody>  <tr>  <td>Matches any</td>  <td><code>'Isn't this fun?'</code></td>  <td>‘Isn’t this fun?’</td>  </tr>  <tr>  <td>Quotes</td>  <td><code>"Isn't this fun?"</code></td>  <td>“Isn’t this fun?”</td>  </tr>  <tr>  <td>Dashes</td>  <td><code>-- is en-dash, --- is em-dash</code></td>  <td>– is en-dash, — is em-dash</td>  </tr>  </tbody>  </table>      |
+| filter.conditions.operator | integer |<table>
+  <thead>
+    <tr>
+      <th>operator</th>
+      <th>operator int value</th>
+      <th>Schema Type</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Matches any</td>
+      <td>0</td>
+      <td>Select</td>
+      <td rowspan="3">
+        mainType<br>
+        subType
+      </td>
+    </tr>
+    <tr>
+      <td>Does not match any</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Contains</td>
+      <td>4</td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td>Does not contain</td>
+      <td>5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Matches</td>
+      <td>0</td>
+      <td></td>
+      <td rowspan="6">
+        IP or Int<br>
+        iploc<br>
+        mgmtip<br>
+        ips<br>
+        ipv6<br>
+        proxyserver<br>
+        externalservers.externalserverid
+      </td>
+    </tr>
+    <tr>
+      <td>Does not match</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Matches</td>
+      <td>0</td>
+      <td>IP or Int</td>
+    </tr>
+    <tr>
+      <td>Does not match</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>is</td>
+      <td>0</td>
+      <td>Bool</td>
+    </tr>
+  </tbody>
+</table>|
 | filter.conditions.expression | string | |
 | filter.conditions.fieldType^ | integer | String = 0, Double = 1, Boolean = 2, |
 
