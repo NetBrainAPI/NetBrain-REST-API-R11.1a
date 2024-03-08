@@ -7,7 +7,7 @@ Call this API to update site properties in NetBrain Domain Management.
  
 > **Title** : Update Site Properties API<br>
  
-> **Version** : 26/10/2023
+> **Version** : 03/07/2024
  
 > **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Sites/SiteInfo
  

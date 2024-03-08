@@ -1,13 +1,13 @@
-# Create Dynamic Search in Site API Design
+# Create Dynamic Search API Design
  
-## ***POST*** /V1/CMDB/Users
+## ***PUT*** /V1/CMDB/Users
 Call this API to create dynamic search in NetBrain Domain Management - Site Manager.
  
 ## Detail Information
  
-> **Title** : Create Dynamic Search in Site API<br>
+> **Title** : Create Dynamic Search API<br>
  
-> **Version** : 07/11/2023
+> **Version** : 03/08/2024
  
 > **API Server URL** : http(s)://IP address of NetBrain Web API Server/ServicesAPI/API/V1/CMDB/Sites/Leaf/DynamicSearch
  
@@ -29,7 +29,7 @@ Call this API to create dynamic search in NetBrain Domain Management - Site Mana
 | filter.expression | string | e.g. A and B and C |
 | filter.conditions | array | |
 | filter.conditions.schema | string | Schema name  |
-| filter.conditions.operator | integer |<table>  <thead>  <tr>  <th>Operator</th>  <th>Operator int value</th>  <th>Schema Type</th>  <th>Schema</th>  </tr>  </thead>  <tbody>  <tr>  <td>Matches any</td>  <td>0</td>  <td rowspan="2">Select</td>  <td rowspan="2">mainType<br>subType</td>  </tr>  <tr>  <td>Does not match any</td>  <td>1</td>  </tr>  <tr>  <td>Contains</td>  <td>4</td>  <td rowspan="4">String</td><td rowspan="4">  </tr>  <tr>  <td>Does not match</td><td>5</td></tr><tr><td>Matches</td><td>0</td>  </tr>  <tr>  <td>Does not contain</td>  <td>1</td></tr>    <tr>  <td>Matches</td>  <td>0</td>   <td>IP or Int</td><td><br>iploc<br>mgmtip<br>ips<br>ipv6<br>proxyserver<br>externalservers.externalserverid</td></tr><tr></tr><tr><td>is</td><td>0</td><td>Bool</td><td></td></tr></tbody>  </table>|
+| filter.conditions.operator | integer |<table>  <thead>  <tr>  <th>Operator</th>  <th>Operator int value</th>  <th>Schema Type</th>  <th>Schema</th>  </tr>  </thead>  <tbody>  <tr>  <td>Matches any</td>  <td>0</td>  <td rowspan="2">Select</td>  <td rowspan="2">mainType<br>subType</td>  </tr>  <tr>  <td>Does not match any</td>  <td>1</td>  </tr>  <tr>  <td>Contains</td>  <td>4</td>  <td rowspan="4">String</td><td rowspan="4">  </tr>  <tr>  <td>Does not match</td><td>5</td></tr><tr><td>Matches</td><td>0</td>  </tr>  <tr>  <td>Does not contain</td>  <td>1</td></tr>    <tr>  <td>Matches</td>  <td>0</td>   <td rowspan="2">IP or Int</td><td rowspan="2"><br>iploc<br>mgmtip<br>ips<br>ipv6<br>proxyserver<br>externalservers.externalserverid</td></tr><tr><td>Does not match any</td>  <td>1</td></tr><tr><td>is</td><td>0</td><td>Bool</td><td></td></tr></tbody>  </table>|
 | filter.conditions.expression | string | |
 | filter.conditions.fieldType^ | integer | String = 0, Double = 1, Boolean = 2, |
 

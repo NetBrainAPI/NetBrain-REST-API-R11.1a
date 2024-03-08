@@ -170,6 +170,8 @@ To see the list of all REST APIs view "REST APIs Documentation".<br>
 14) [Replace Site Devices API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Replace%20Site%20Devices%20API.md)<br>
 15) [Site Transaction Heartbeat API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Site%20Transaction%20Heartbeat%20API.md)
 16) [Update Site Properties API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Update%20Site%20Properties%20API.md)
+17) [Create Dynamic Search API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Site%20Management/Create%20Dynamic%20Search%20in%20Site%20API.md)
+
 
 ### [Shared Device Setting Management](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/tree/main/REST%20APIs%20Documentation/Shared%20Device%20Setting%20Management) 
 1) [Get device API server settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Devices%20Management/Get%20Group%20Devices%20API.md)<br>
