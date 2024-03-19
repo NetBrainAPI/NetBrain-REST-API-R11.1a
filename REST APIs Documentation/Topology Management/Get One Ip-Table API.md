@@ -162,10 +162,7 @@ except Exception as e:
 
 ```
 
-    {'OneIPList': [{'lanSegment': '192.168.180.6/32', 'ip': '192.168.180.6', 'mac': '0050.56be.10f6', 'devName': 'UCSPE', 'interfaceName': 'Network adapter 1',
- 'switchName': '', 'portName': '', 'alias': '', 'dns': 'UCSPE.Network adapter 1', 'sourceDevice': 'UCSPE', 'serverType': 13002, 'switchType': 1009, 
- 'gateway': 'UCSPE.Network adapter 1', 'vlanId': '', 'vlanGroupId': 'UCSPE##Network adapter 1', 'updateTime': '2024-02-27T21:33:59Z', 'userFlag': 9, 
- 'source': 'Device Interface', 'vendor': 'VMware, Inc.', 'descr': '', 'extSwitchPorts': []}], 'statusCode': 790200, 'statusDescription': 'Success.'}
+    {'OneIPList': [{'lanSegment': '192.168.180.6/32', 'ip': '192.168.180.6', 'mac': '0050.56be.10f6', 'devName': 'UCSPE', 'interfaceName': 'Network adapter 1','switchName': '', 'portName': '', 'alias': '', 'dns': 'UCSPE.Network adapter 1', 'sourceDevice': 'UCSPE', 'serverType': 13002, 'switchType': 1009, 'gateway': 'UCSPE.Network adapter 1', 'vlanId': '', 'vlanGroupId': 'UCSPE##Network adapter 1', 'updateTime': '2024-02-27T21:33:59Z', 'userFlag': 9, 'source': 'Device Interface', 'vendor': 'VMware, Inc.', 'descr': '', 'extSwitchPorts': []}], 'statusCode': 790200, 'statusDescription': 'Success.'}
     
 
 # cURL Code from Postman:
