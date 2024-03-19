@@ -83,6 +83,8 @@ If user set "IP = null" or " IP = "" " but provide the input values of "beginInd
 |OneIPList.source| string | userFlag tos string<br><br> "Auto", //USERFLAG_AUTO<br>"Manual",//USERFLAG_MANUAL<br>"Provide Outside", //OUTSIDE_ANOYMOUS_SOURCE<br>"NDP Table", //AUTO_CDPLLDP_TABLE<br>"MAC Table",//AUTO_MAC_TABLE<br>"ARP Table", //AUTO_ARP_TABLE<br>"NDP & MAC table",//AUTO_CDPLLDP_MAC_TABLE<br>"Device Interface",//AUTO_DEVICE_INTERFACE<br>"Driver"//USERFLAG_DRIVER |
 |OneIPList.vendor| string | device vendor |
 |OneIPList.descr| string | description of the switch port  |
+|OneIPList.vlanId| string | The vlan of the entry is learned on the switch  |
+|OneIPList.vlanGroup| string | VLAN Group of the device assigned to the same LAN  |
 |time| DataTime | The last update time of the device configuration. |
 |statusCode| integer | Code issued by NetBrain server indicating the execution result.  |
 |statusDescription| string | The explanation of the status code. |
