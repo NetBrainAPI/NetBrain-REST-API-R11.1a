@@ -162,7 +162,10 @@ except Exception as e:
 
 ```
 
-    {'OneIPList': [{'lanSegment': '123.20.1.8/29', 'ip': '123.20.1.11', 'mac': 'AABB.CC80.1300', 'devName': 'SW6', 'interfaceName': 'Vlan66', 'switchName': '', 'portName': '', 'alias': '', 'dns': 'SW6.Vlan66', 'sourceDevice': 'SW6', 'serverType': 2001, 'switchType': 2001, 'updateTime': '2019-02-01T19:13:05Z', 'userFlag': 9, 'source': 'Device Interface', 'vendor': '', 'descr': ''}], 'statusCode': 790200, 'statusDescription': 'Success.'}
+    {'OneIPList': [{'lanSegment': '192.168.180.6/32', 'ip': '192.168.180.6', 'mac': '0050.56be.10f6', 'devName': 'UCSPE', 'interfaceName': 'Network adapter 1',
+ 'switchName': '', 'portName': '', 'alias': '', 'dns': 'UCSPE.Network adapter 1', 'sourceDevice': 'UCSPE', 'serverType': 13002, 'switchType': 1009, 
+ 'gateway': 'UCSPE.Network adapter 1', 'vlanId': '', 'vlanGroupId': 'UCSPE##Network adapter 1', 'updateTime': '2024-02-27T21:33:59Z', 'userFlag': 9, 
+ 'source': 'Device Interface', 'vendor': 'VMware, Inc.', 'descr': '', 'extSwitchPorts': []}], 'statusCode': 790200, 'statusDescription': 'Success.'}
     
 
 # cURL Code from Postman:
@@ -170,10 +173,9 @@ except Exception as e:
 
 ```python
 curl -X GET \
-  'http://192.168.28.79/ServicesAPI/API/V1/CMDB/Topology/OneIPTable?ip=123.20.1.11&beginIndex=0&count=5' \
-  -H 'Postman-Token: ae0e4721-9d20-44ac-9b4d-4d73ccb8abcd' \
+  'http://192.168.31.191/ServicesAPI/API/V1/CMDB/Topology/OneIPTable' \
   -H 'cache-control: no-cache' \
-  -H 'token: 220d6462-ba64-4058-83cb-affb2d55de78'
+  -H 'token: fb1e1360-f3c9-4197-929b-886a146d6bdf'
 ```
 
 # Error Example：
