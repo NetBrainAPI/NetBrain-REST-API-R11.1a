@@ -1,6 +1,6 @@
 # Create Dynamic Search API Design
  
-## ***PUT*** /V1/CMDB/Users
+## ***PUT*** /V1/CMDB/Sites/Leaf/DynamicSearch
 Call this API to create dynamic search in NetBrain Domain Management - Site Manager.
  
 ## Detail Information

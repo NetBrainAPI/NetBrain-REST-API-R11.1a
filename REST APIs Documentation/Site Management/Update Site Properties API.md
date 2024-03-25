@@ -1,6 +1,6 @@
 # Update Site Properties API Design
  
-## ***PUT*** /V1/CMDB/Users
+## ***PUT*** /V1/CMDB/Sites/SiteInfo
 Call this API to update site properties in NetBrain Domain Management.
  
 ## Detail Information
