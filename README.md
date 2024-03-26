@@ -139,8 +139,10 @@ To see the list of all REST APIs view "REST APIs Documentation".<br>
 1) [Add Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Add%20Network%20Settings%20API.md)<br>
 2) [Delete Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Delete%20Network%20Settings%20API.md)<br>
 3) [Get Check Device Count in Network Setting API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Get%20Check%20Device%20Count%20in%20Network%20Setting.md)<br>
-4) [Update Device Count in Network Setting API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Update%20Device%20Count%20in%20Network%20Setting.md)<br>
-5) [Update Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Update%20Network%20Settings%20API.md)
+4) [Get Devices of a Network Setting API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Get%20Devices%20of%20a%20Network%20Setting%20API.md)<br>
+5) [Get Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Get%20Network%20Settings%20API.md)<br>
+6) [Update Device Count in Network Setting API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Update%20Device%20Count%20in%20Network%20Setting.md)<br>
+7) [Update Network Settings API](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Network%20Setting/Update%20Network%20Settings%20API.md)
 
 
 ### [Path Management](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Path%20Management/Path%20Calculation%20API.md)
