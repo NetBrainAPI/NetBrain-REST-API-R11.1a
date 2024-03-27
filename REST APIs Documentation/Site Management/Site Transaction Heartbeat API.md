@@ -5,6 +5,8 @@
 This API send a hearbeat signal to the server to keep a transaction alive. 
 
 Failed to do so will cause transaction being disgarded by the system if no other site change operations sent to the server via the current session with the next 30 seconds.
+In case of a long-running site build, the session may get terminated depending on the device's configuration on TCP session timeout period.
+The use of TCP KEEP ALIVE packets will resolve the issue.
 
 ## Detail Information
 
