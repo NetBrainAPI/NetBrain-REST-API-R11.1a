@@ -1,7 +1,7 @@
 
 # Get Product Version API Design
 
-GET /V1/System/nodeinfo
+GET /V1/System/ProductVersion
 -----------------------
 
 Call this API to get the overall system version information.
