@@ -43,8 +43,9 @@ params = {
 |**Name**|**Type**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-| hostname | string  | The host name of device. |
-| ip | string  | The management ip of device. |
+| hostname | string | The hostname of device. |
+| ignoreCase | boolean | Recognizes as case-insensitive hostname|
+| ip | string | The management ip of device. |
 
 
 ## Headers
