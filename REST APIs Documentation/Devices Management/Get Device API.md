@@ -19,6 +19,8 @@ params = {
     }
 ```
 
+**<b>Important</b>: It is recommended that you refer to [Get Devices API Version_1](https://github.com/NetBrainAPI/NetBrain-REST-API-R11.1a/blob/main/REST%20APIs%20Documentation/Devices%20Management/Get%20Devices%20API%20Version_1.md), instead of referring to the current page.
+
 ## Detail Information
 
 > **Title** : Get Devices API<br>
